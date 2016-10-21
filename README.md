@@ -23,7 +23,7 @@ make
 ##Running
 ###The Interpreter
 ```
-./interpreter progs/hello.bf
+./interpreter progs/hello.b
 ```
 
 ###The Compiler
