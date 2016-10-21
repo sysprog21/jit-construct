@@ -9,7 +9,7 @@ Development packages for Ubuntu Linux Ubuntu 16.04 LTS:
 ```
 sudo apt-get update
 sudo apt-get install build-essential
-sudo apt-get install gcc-5-multilib
+sudo apt-get install gcc-multilib
 sudo apt-get install lua5.2 lua-bitop
 sudo apt-get install gcc-arm-linux-gnueabihf
 sudo apt-get install qemu-user
