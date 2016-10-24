@@ -4,7 +4,7 @@ BIN = interpreter \
 
 CROSS_COMPILE = arm-linux-gnueabihf-
 QEMU_ARM = qemu-arm -L /usr/arm-linux-gnueabihf
-LUA = lua
+LUA = lua5.2
 
 all: $(BIN)
 
