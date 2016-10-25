@@ -5,6 +5,16 @@ BIN = interpreter \
 CROSS_COMPILE = arm-linux-gnueabihf-
 QEMU_ARM = qemu-arm -L /usr/arm-linux-gnueabihf
 LUA = lua
+LUAVERSION_MAJOR = $(shell $(LUA) -v | cut -d' ' -f2 | cut -d'.' -f1)
+LUAVERSION_MINOR = $(shell $(LUA) -v | cut -d' ' -f2 | cut -d'.' -f2)
+
+# Checking lua version is less then 5.3.
+# if not, change to lua 5.2
+ifeq ($(LUAVERSION_MAJOR), 5)
+ifeq ($(shell test $(LUAVERSION_MINOR) -gt 2; echo $$?), 0)
+	LUA = lua5.2
+endif
+endif
 
 all: $(BIN)
 
